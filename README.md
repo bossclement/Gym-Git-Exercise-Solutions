@@ -8,4 +8,8 @@ git branch -M main
 git add -A
 git commit -m "New changes"
 git push origin main
+git checkout -b dev
+git checkout -b test
+git checkout dev
+git branch -D test
 ```
