@@ -124,6 +124,40 @@ gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % ls
 README.md	file1.txt	home.html
 about.html	file2.txt	team.html
 ```
+# Bundle 2
+## Exercise 1
+```bash
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % echo "<p>services page</p>" services.html
+<p>services page</p> services.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % echo "<p>services page</p>" > services.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add services.html 
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "added service page" 
+[ft/bundle-2 04da568] added service page
+ 1 file changed, 1 insertion(+)
+ create mode 100644 services.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft-bundle-2
+error: src refspec ft-bundle-2 does not match any
+error: failed to push some refs to 'https://github.com/bossclement/Gym-Git-Exercise-Solutions.git'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft/bundle-2
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 629 bytes | 629.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/bossclement/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote: 
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+```
 # Bundle 3
 ## Exercise 1 answers
 ```bash
@@ -247,28 +281,6 @@ remote:      https://github.com/bossclement/Gym-Git-Exercise-Solutions/pull/new/
 remote: 
 To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/faq-page -> ft/faq-page
-gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git log
-commit 0d13bf2b60ae061b52a243877fca14874596ab2c (HEAD -> ft/faq-page, origin/ft/faq-page)
-Author: Gym Bigogwe <gymbigogwe@Bigogwes-iMac.local>
-Date:   Tue Mar 4 12:09:13 2025 +0200
-
-    added faq page
-
-commit af5b58c1b3fb769c059fa4d829c22bd6e58d9d5e (origin/ft/contact-page, ft/contact-page)
-Author: Gym Bigogwe <gymbigogwe@Bigogwes-iMac.local>
-Date:   Tue Mar 4 12:04:47 2025 +0200
-
-    added contact page
-
-commit b973cbe3c8b884d24dcbc2b0bb1fe855beb03cbb
-Author: Gym Bigogwe <gymbigogwe@Bigogwes-iMac.local>
-Date:   Tue Mar 4 11:50:12 2025 +0200
-
-    created a teamfile
-
-commit 6e0c138b4698b25506bb997370e2d61246d74e44 (main)
-Author: Gym Bigogwe <gymbigogwe@Bigogwes-iMac.local>
-Date:   Tue Mar 4 11:32:33 2025 +0200
 gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git revert b973cbe3c8b884d24dcbc2b0bb1fe855beb03cbb
 [ft/faq-page 9a1ff17] Revert "created a teamfile"
  1 file changed, 1 deletion(-)
