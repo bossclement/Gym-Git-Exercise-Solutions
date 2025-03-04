@@ -124,6 +124,40 @@ gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % ls
 README.md	file1.txt	home.html
 about.html	file2.txt	team.html
 ```
+# Bundle 2
+## Exercise 1
+```bash
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % echo "<p>services page</p>" services.html
+<p>services page</p> services.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % echo "<p>services page</p>" > services.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add services.html 
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "added service page" 
+[ft/bundle-2 04da568] added service page
+ 1 file changed, 1 insertion(+)
+ create mode 100644 services.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft-bundle-2
+error: src refspec ft-bundle-2 does not match any
+error: failed to push some refs to 'https://github.com/bossclement/Gym-Git-Exercise-Solutions.git'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git status
+On branch ft/bundle-2
+nothing to commit, working tree clean
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft/bundle-2
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 629 bytes | 629.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/bossclement/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote: 
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+```
 # Bundle 3
 ## Exercise 1 answers
 ```bash
