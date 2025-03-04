@@ -281,28 +281,6 @@ remote:      https://github.com/bossclement/Gym-Git-Exercise-Solutions/pull/new/
 remote: 
 To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/faq-page -> ft/faq-page
-gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git log
-commit 0d13bf2b60ae061b52a243877fca14874596ab2c (HEAD -> ft/faq-page, origin/ft/faq-page)
-Author: Gym Bigogwe <gymbigogwe@Bigogwes-iMac.local>
-Date:   Tue Mar 4 12:09:13 2025 +0200
-
-    added faq page
-
-commit af5b58c1b3fb769c059fa4d829c22bd6e58d9d5e (origin/ft/contact-page, ft/contact-page)
-Author: Gym Bigogwe <gymbigogwe@Bigogwes-iMac.local>
-Date:   Tue Mar 4 12:04:47 2025 +0200
-
-    added contact page
-
-commit b973cbe3c8b884d24dcbc2b0bb1fe855beb03cbb
-Author: Gym Bigogwe <gymbigogwe@Bigogwes-iMac.local>
-Date:   Tue Mar 4 11:50:12 2025 +0200
-
-    created a teamfile
-
-commit 6e0c138b4698b25506bb997370e2d61246d74e44 (main)
-Author: Gym Bigogwe <gymbigogwe@Bigogwes-iMac.local>
-Date:   Tue Mar 4 11:32:33 2025 +0200
 gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git revert b973cbe3c8b884d24dcbc2b0bb1fe855beb03cbb
 [ft/faq-page 9a1ff17] Revert "created a teamfile"
  1 file changed, 1 deletion(-)
