@@ -158,6 +158,82 @@ remote:
 To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 ```
+## Exercise 2
+```bash
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git pull
+Already up to date.
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % echo "<p>service page</p>" > service.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add .
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "added service page"
+[ft/service-redesign 0cf80d3] added service page
+ 1 file changed, 1 insertion(+)
+ create mode 100644 service.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin t/service-redesign
+error: src refspec t/service-redesign does not match any
+error: failed to push some refs to 'https://github.com/bossclement/Gym-Git-Exercise-Solutions.git'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 619 bytes | 619.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/bossclement/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote: 
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % cat >> service.html
+<p>added a new feature</p>    
+^C
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add .
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "edited services in main"
+[main 2cba8ef] edited services in main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 service.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+   4c87399..2cba8ef  main -> main
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git merge main
+Auto-merging service.html
+CONFLICT (add/add): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % vim service.html 
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add .
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "merged service page from main to ft/service redesign branchs"
+[ft/service-redesign 25ef2de] merged service page from main to ft/service redesign branchs
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 360 bytes | 360.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+   0cf80d3..25ef2de  ft/service-redesign -> ft/service-redesign
+```
 # Bundle 3
 ## Exercise 1 answers
 ```bash
