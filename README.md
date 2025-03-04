@@ -372,3 +372,64 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
    0d13bf2..9a1ff17  ft/faq-page -> ft/faq-page
 ```
+## Exercise 2
+```bash
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % vim home.html 
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add .
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "added contents in home.html"
+[main 2fa850f] added contents in home.html
+ 1 file changed, 1 insertion(+)
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git git checkout ft/home-page-redesign
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+	init
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout ft/home-page-redesign   
+Switched to branch 'ft/home-page-redesign'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git rebase main
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply bcd611e... finished budnle 3 exercise 1
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply bcd611e... finished budnle 3 exercise 1
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % vim README.md  
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add .
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "updated the readme file of redesign branch to the latest one"
+[detached HEAD 74ee407] updated the readme file of redesign branch to the latest one
+ 1 file changed, 31 insertions(+)
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % vim home.html 
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add home.html 
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "changes in home.html"
+[detached HEAD 3f1a744] changes in home.html
+ 1 file changed, 1 insertion(+)
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.15 KiB | 2.15 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting
+remote:      https://github.com/bossclement/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote: 
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+```
