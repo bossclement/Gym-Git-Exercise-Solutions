@@ -195,13 +195,9 @@ gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout main
 Switched to branch 'main'
 Your branch is ahead of 'origin/main' by 4 commits.
   (use "git push" to publish your local commits)
-gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % ls           
-README.md	about.html	file1.txt	file2.txt	home.html
 gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % cat >> service.html
 <p>added a new feature</p>    
 ^C
-gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % cat service.html 
-<p>added a new feature</p>
 gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add .
 gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "edited services in main"
 [main 2cba8ef] edited services in main
@@ -224,12 +220,6 @@ Auto-merging service.html
 CONFLICT (add/add): Merge conflict in service.html
 Automatic merge failed; fix conflicts and then commit the result.
 gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % vim service.html 
-gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "merged service page from main to ft/service redesign branchs"
-U	service.html
-error: Committing is not possible because you have unmerged files.
-hint: Fix them up in the work tree, and then use 'git add/rm <file>'
-hint: as appropriate to mark resolution and make a commit.
-fatal: Exiting because of an unresolved conflict.
 gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add .
 gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "merged service page from main to ft/service redesign branchs"
 [ft/service-redesign 25ef2de] merged service page from main to ft/service redesign branchs
