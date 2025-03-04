@@ -433,3 +433,36 @@ remote:
 To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 ```
+## Bundle 4
+# Exercise 1
+```bash
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % vim home.html 
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add home.html 
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "added new changes in home"
+[main 28c6f29] added new changes in home
+ 1 file changed, 1 insertion(+)
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+   2fa850f..28c6f29  main -> main
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git remote add git-copy https://bossclement:<secret token>@github.com/bossclement/Git-exercise-clone.git
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push git-copy
+Enumerating objects: 54, done.
+Counting objects: 100% (54/54), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (43/43), done.
+Writing objects: 100% (54/54), 11.36 KiB | 11.36 MiB/s, done.
+Total 54 (delta 22), reused 8 (delta 3), pack-reused 0
+remote: Resolving deltas: 100% (22/22), done.
+To https://github.com/bossclement/Git-exercise-clone.git
+ * [new branch]      main -> main
+```
