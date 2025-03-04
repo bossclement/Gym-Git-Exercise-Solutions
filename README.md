@@ -466,3 +466,82 @@ remote: Resolving deltas: 100% (22/22), done.
 To https://github.com/bossclement/Git-exercise-clone.git
  * [new branch]      main -> main
 ```
+# Exercise 2
+```bash
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % echo "<p>Footer page</p>" > footer.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add footer.html 
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "added fotter "
+[ft/footer e74fed8] added fotter
+ 1 file changed, 1 insertion(+)
+ create mode 100644 footer.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft/footer
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/bossclement/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote: 
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout ft/footer
+Switched to branch 'ft/footer'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % cat >> footer.html 
+<p>New changes</p>
+^C
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git add footer.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "added second changes in footer"
+[ft/footer 1596e01] added second changes in footer
+ 1 file changed, 1 insertion(+)
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft/footer
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 315 bytes | 315.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+   e74fed8..1596e01  ft/footer -> ft/footer
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout ft/squashing
+error: pathspec 'ft/squashing' did not match any file(s) known to git
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git merge --squash ft/footer
+Updating 28c6f29..1596e01
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 footer.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git commit -m "footer changes squashing"
+[ft/squashing 63efe79] footer changes squashing
+ 1 file changed, 2 insertions(+)
+ create mode 100644 footer.html
+gymbigogwe@Bigogwes-iMac Gym-Git-Exercise-Solutions % git push origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/bossclement/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote: 
+To https://github.com/bossclement/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
